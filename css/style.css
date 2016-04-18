@@ -21,3 +21,11 @@ h2 {
 	letter-spacing: 1%;
 	margin: 45% 0;
 }
+
+/*---Start Parallax---*/
+
+.parallax {
+	background: url("https://farm8.staticflickr.com/7385/16242321750_00a8c2d596_b.jpg") repeat fixed 100%;
+}
+
+/*---End Parallax---*/
