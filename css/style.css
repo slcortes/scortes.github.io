@@ -94,8 +94,7 @@ a img {
 }
 
 #aboutMe {
-/*  background-color: #D57878;*/
-  background-color: #C26868;
+  background-color: #660066;
   height: 1020px;
   margin-top:-30px;
 }
@@ -447,7 +446,7 @@ ul.tContents {
 
 @media (max-width: 480px) {
   
-  .toc-holder {
+  .tableContents {
     display: none;
   }
 
