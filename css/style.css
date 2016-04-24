@@ -326,11 +326,6 @@ img.icon:hover {
   padding-left: 95px;
 }
 
-.tableContents {
-  position: fixed;
-  right: 0;
-}
-
 a.tableContentsBar {
   color: #ccc;
   position: relative;
