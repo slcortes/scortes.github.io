@@ -224,6 +224,16 @@ img.icon:hover {
   filter: none;
 }
 
+#skills {
+  background: #eee;
+  height: auto;
+  margin-top: -30px;
+  text-align: center;
+  padding: 60px 0 60px 0;
+  font-size: 26px;
+  line-height: 40px;
+}
+
 #projects {
   background: #eee;
   height: auto;
@@ -324,6 +334,11 @@ img.icon:hover {
 
 .tableContents li li li a:hover {
   padding-left: 95px;
+}
+
+.tableContents {
+  position: fixed;
+  right: 0;
 }
 
 a.tableContentsBar {
