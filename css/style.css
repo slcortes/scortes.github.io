@@ -288,7 +288,7 @@ img.icon:hover {
   line-height: 20px;
 }
 
-/*TOC*/
+/*tableOfContents*/
 .container {
   width: 90%;
   max-width: 900px;
@@ -435,7 +435,7 @@ ul.tContents {
 
 
 @media screen and (max-width:700px) {
-  #code, #console {
+  #code, #program {
     width: 100%;
     overflow: hidden;
   }
@@ -503,7 +503,7 @@ ul.tContents {
 
 @media only screen and (min-device-width : 320px) and (max-device-width : 568px) { 
 /* STYLES GO HERE */
-  .toc-holder {
+  .tableContents {
     display: none;
   }
 
