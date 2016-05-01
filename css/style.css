@@ -100,7 +100,7 @@ a img {
 }
 
 #code {
-/*  margin-top:150px;*/
+
   border-radius: 5px;
   width:750px;
   margin: 0 auto;
@@ -368,14 +368,6 @@ a.tableContentsBar:hover {
   -o-transition: -o-transform .4s ease;
   -ms-transition: -ms-transform .4s ease;
   transition: transform .4s ease;
-}
-
-.tableContentsBar span.rotate {
-  -webkit-transform: rotate(180deg);
-  -moz-transform: rotate(180deg);
-  -o-transform: rotate(180deg);
-  -ms-transform: rotate(180deg);
-  transform: rotate(180deg);
 }
 
 .tContents {
