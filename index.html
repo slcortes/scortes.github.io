@@ -20,27 +20,54 @@
 			ga('send', 'pageview');
 		</script>
 			<!-- End Google Analytics -->
+	<script type="text/javascript">
+
+setTimeout(function() {
+  if (location.hash) {
+    window.scrollTo(0, 0);
+  }
+}, 1);
+
+		/*Menu-toggle*/
+   var visible=true;
+	function toggleButton(){
+	if(visible){
+	document.getElementById("tContents").style.display="block";
+	visible=false;
+	}else{
+	document.getElementById("tContents").style.display="none";
+	visible=true;
+	}
+	
+	}
+
+
+
+
+</script>
 	</head>
-	
 <body>
-	
 	<!-- Navigation -->
 	<div id="tableContents" class="tableContents">
-		<a href="#" class="tableContentsBar" id="tableContentsBar"><span>&#9776;</span></a>
-			<ul id="tContents" class="tContents">
+	
+		<a href="#toggle" button class="tableContentsBar" id="tableContentsBar" onClick="toggleButton();"><span>&#9776;</span></a button>
+			<ul id="tContents" class="tContents" style="display:none">
 				<li class="tab"><a href="#aboutMe">About Me</a></li>
 				<li class="tab"><a href="#resume">Résumé</a></li>
 				<li class="tab"><a href="#skills">Skills</a></li>
 				<li class="tab"><a href="#projects">Projects</a></li>
 			</ul>
-	</div>
-	
+	</div><!--End navigation -->
 	<div id="wrapper">
 		<!-- Header -->
-		<div id="header">
+		<div id="header">	
+		
+			
 			<div class="myName"><a href="#name"><strong>Stephanie Cortes</strong></a></div>
+			
 			<div class="nav">
 				<ul class="mobile-nav">
+				
 					<li class="mobile-header"><a href="#aboutMe">About Me</a></li>
 					<li class="mobile-header"><a href="#resume">Résumé</a></li>
 					<li class="mobile-header"><a href="#skills">Skills</a></li>
@@ -48,20 +75,18 @@
 				</ul>
 			</div>
 		</div>
-		
+		</div>
 		<!-- Banner -->
-		
-		<div id="illustration"><center><img src="images/cherryBlossom.png" width="300px" height="430px"></center></div>
-		
-		<!-- About Me -->
+<div id="illustration"><center><img src="images/cherryBlossom.png" width="300px" height="430px"></center></div>
+<!-- About Me -->
 		<div id="aboutMe"><div class="details">
-			<p>Hello, world!  I am an aspiring Web Developer and Designer.</p>
+			<p>Hello, world!  I am an aspiring Web Developer.</p>
 			<br><br>
 			<!-- Start Program -->
 				<div id="code">
 					<div id="program">
 						&gt; Stephanie.origin<br/>
-							<span class="answer">&nbsp;&nbsp;=&gt; "Glendale, CA"<br/><br/></span>
+							<span class="answer">&nbsp;&nbsp;=&gt; "Glendale, California"<br/><br/></span>
 						&gt; Stephanie.education<br/>
 							<span class="answer">&nbsp;&nbsp;=&gt; "California State Polytechnic University, Pomona"<br/><br/></span>
 						&gt; Stephanie.major<br/>
@@ -80,16 +105,17 @@
 						&gt; Stephanie.résumé<br/>
 							<span class="answer">&nbsp;&nbsp;=&gt; "<a target="_blank" href="#">#</a>"<br/><br/></span>
 							&gt; Stephanie.socialMedia<br/>
-							<span class="answer">&nbsp;&nbsp;=&gt; ["<a target="_blank" href="https://www.linkedin.com/in/slcortes">linkedin</a>",
-								 "<a target="_blank" href="https://www.facebook.com/stephalulu">facebook</a>",
-								 "<a target="_blank" href="https://github.com/slcortes">github</a>"]<br/><br/></span>
+							<span class="answer">&nbsp;&nbsp;=&gt; ["<a target="_blank" href="#">linkedin</a>",
+								 "<a target="_blank" href="#">facebook</a>",
+								 "<a target="_blank" href="#">github</a>"]<br/><br/></span>
 							&gt; Stephanie.email<br/>
-							<span class="answer">&nbsp;&nbsp;=&gt; "<a target="_blank" href="mailto:stephcortes@gmail.com">stephcortes@gmail.com</a>"<br/><br/></span>
+							<span class="answer">&nbsp;&nbsp;=&gt; "<a target="_blank" href="mailto:stephcortes@gmail.com">#</a>"<br/><br/></span>
 					</div>
 				</div>
 		</div>
 		</br>
 	</div>
+<!-- End About Me -->	
 
 <!-- Start Resume -->
 <div id="resume"><div class="details">
@@ -219,54 +245,77 @@
 	<br><br><br><br>
 </div>
 </div>
-	<!-- Skills -->
-	<div id="skills"><div class="details">
-		<p class="section-tagline">My Skills</p>
-		
-		
-	</div>
-	
-	<!-- Projects -->
-	<div id="projects"><div class="details">
+<!-- Projects -->
+	<div id="projects">
+	<div class="details">
 		<p class="section-tagline">My Projects</p>
 		
 		<div class="project-thumb project-big">
-			<a class="image-popup-no-margins" href="images/SM_Homepage.png"><img src="images/SM_Homepage.png" width=461px; height=394px></a>
-			<a class="image-popup-no-margins" href="images/searchResults.png"><img src="images/searchResults.png" width=461px; height=394px></a>
-			<a class="image-popup-no-margins" href="images/serviceRequest.png"><img src="images/serviceRequest.png" width=461px; height=394px></a>
-			<a class="image-popup-no-margins" href="images/accountDetails.png"><img src="images/accountDetails.png" width=461px; height=394px></a>
-			<p class="description"><strong>2016 IT Competition, Web Development Category</strong>&nbsp;<a href="https://github.com/Alackey/ServiceMarketplace">&#187;</a> I participated in MISSA's 2016 IT Competition, where we were assigned a case to create a Service Marketplace website.  The website had to be free to use for both clients and service providers, where they can easily create an account and post/bid on their behalf.  </p>
+		<a href="#picture1"><img id="myImg1" src="images/SM_Homepage.png" width=400px; height=394px; onClick='myImagePoper("myImg1")'/></a>
+		<a href="#picture2"><img id="myImg2" src="images/searchResults.png" width=461px; height=394px; onClick='myImagePoper("myImg2")' /></a>
+		<a href="#picture3"><img id="myImg3" src="images/serviceRequest.png" width=461px; height=394px; onClick='myImagePoper("myImg3")' /></a>
+		<a href="picture4"><img id="myImg4" src="images/accountDetails.png" width=461px; height=394px; onClick='myImagePoper("myImg4")' /></a>
+			<p style="text-align:left;margin-top:2px; background-color:white; font-size:16px;display: inline-block; width:90%;" class="description"><strong>2016 IT Competition, Web Development Category</strong>&nbsp;<a href="https://github.com/Alackey/ServiceMarketplace">&#187;</a> I participated in MISSA's 2016 IT Competition, where we were assigned a case to create a Service Marketplace website.  The website had to be free to use for both clients and service providers, where they can easily create an account and post/bid on their behalf.  </p>
 		</div>	
 			
 		<div class="row">
 			<div class="portfolio-thumb">
-					<a class="image-popup-no-margins" href="images/nefishchip.png"><img src="images/nefishchip.png" width=461px; height=394px></a>
+			<a href="picture5"><img id="myImg5" src="images/nefishchip.png"  width=461px; height=400px onClick='myImagePoper("myImg5")' /></a>
 			<p class="description"><strong>Personal Website</strong>&nbsp;<a href="http://slcortes.github.io/">&#187;</a>  I took on the challenge of creating this portfolio website from scratch, based on what I learned from online tutorials and friends!  My vision for this website was to provide - as well as being able to express my passion for programming.  This website took around two weeks to create, and I am very proud of the final result! I enjoy seeing my code come to life, especially when the results can be seen almost instantly! :D </p>
 			</div>
-			
-		<div class="row">
 			<div class="portfolio-thumb">
-				<a class="image-popup-no-margins" href="images/nefishchip.png"><img src="images/nefishchip.png" width=461px; height=394px></a>
-			<p class="description"><strong>CIS 231</strong>&nbsp;<a href="http://nefishandchips.wix.com/fishandchips">&#187;</a> A group project where we had to design a website for the 			restaurant, New England Fish And Chips, located in Alhambra, CA.  As a Developer and Tester for the website, I was responsible for creating the Menu, About, and Review pages, 			as well as performing several tests, which included: Load, Performance, and Stress Tests, Cross-Browser Testing, Security Testing and Accessibility Testing.</p>
+			<a href="#picture6"><img id="myImg6" src="images/nefishchip.png"  width=461px; height=400px onClick='myImagePoper("myImg6")' /></a>
+				<p style="text-align:left;margin-top:10px;" class="description"><strong>CIS 231</strong>&nbsp;<a href="http://nefishandchips.wix.com/fishandchips">&#187;</a> A group project where we had to design a website for the 			restaurant, New England Fish And Chips, located in Alhambra, CA.  As a Developer and Tester for the website, I was responsible for creating the Menu, About, and Review pages, 			as well as performing several tests, which included: Load, Performance, and Stress Tests, Cross-Browser Testing, Security Testing and Accessibility Testing.</p>
 			</div>
 		</div>
-	</div></div>
+	</div>
+	</div>
+</div><!--End projects -->
+
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+  <span class="close">X</span>
+  <img class="modal-content" id="img01">
+  <div id="caption"></div>
+</div>
+
+<script>
+ // Get the modal
+var modal = document.getElementById('myModal');
+function myImagePoper(myImg){
+// Get the image and insert it inside the modal - use its "alt" text as a caption
+var img = document.getElementById(myImg);
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+img.onclick = function(){
+    modal.style.display = "block";
+    modalImg.src = this.src;
+    modalImg.alt = this.alt;
+    captionText.innerHTML = this.alt;
+}
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() { 
+    modal.style.display = "none";
+}
+}
+</script>
+
+
+
+<div  id ="footer">
 			
-			
-			<div  id ="footer"><div class="details">
 				© 2016 Stephanie Cortes. 
 				<span class="right">
 					<a target="_blank" href="mailto:stephcortes@gmail.com">Email</a>&nbsp;//&nbsp;
-					<a target="_blank" href="http://www.linkedin.com/in/slcortes">LinkedIn</a>&nbsp;//&nbsp;
-					<a target="_blank" href="http://www.facebook.com/stephalulu">Facebook</a>
+					<a target="_blank" href="#">LinkedIn</a>&nbsp;//&nbsp;
+					<a target="_blank" href="#">Facebook</a>
 				</span>
-			</div></div>
-
-	
-	
-							
-		
+			
+			</div>
 </body>
-
-
 </html>
