@@ -23,92 +23,97 @@ a img {
   border: none;
 }
 /*my image css*/
-#myImg {
-    border-radius: 5px;
-    cursor: pointer;
-    transition: 0.3s;
+
+
+.image-lightbox img {
+	/* Inherit the width and height from the parent element */
+	width: inherit;
+	height: inherit;
+	z-index: 3000;
 }
 
-#myImg:hover {opacity: 0.7;}
-
-/* The Modal (background) */
-.modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    padding-top: 100px; /* Location of the box */
-    left: 0;
-    top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+.holder {
+	/* The width and height, you can change these */
+	width: 400px;
+	height: 300px;
+	/* Float left, so everything aligns right */
+	float: left;
+	margin: 0 20px 0 0;
+	
+	
 }
 
-/* Modal Content (image) */
-.modal-content {
-    margin: auto;
-    display: block;
-    width: 80%;
-    max-width: 700px;
+.image-lightbox {
+	/* Inherit width and height from the .holder */
+	width: inherit;
+	height: inherit;
+	padding: 10px;
+	/* Box shadow */
+	box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+	background: #fff;
+	border-radius: 5px;
+	/* Position absolutely so we can zoom it out later */
+	position: absolute;
+	
+	font-family: Arial, sans-serif;
+	/* Transitions to provide some eye candy */
+	-webkit-transition: all ease-in 0.5s;
+	-moz-transition: all ease-in 0.5s;
+	-ms-transition: all ease-in 0.5s;
+	-o-transition: all ease-in 0.5s;
 }
 
-/* Caption of Modal Image */
-#caption {
-    margin: auto;
-    display: block;
-    width: 80%;
-    max-width: 700px;
-    text-align: center;
-    color: #ccc;
-    padding: 10px 0;
-    height: 150px;
+.image-lightbox span {
+	display: none;
 }
 
-/* Add Animation */
-.modal-content, #caption {    
-    -webkit-animation-name: zoom;
-    -webkit-animation-duration: 0.6s;
-    animation-name: zoom;
-    animation-duration: 0.6s;
+.image-lightbox .expand {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	z-index: 4000;
+	background: rgba(0,0,0,0); /* Fixes an IE bug */
+	left: 0;
 }
 
-@-webkit-keyframes zoom {
-    from {-webkit-transform:scale(0)} 
-    to {-webkit-transform:scale(1)}
+.image-lightbox .close {
+	position: absolute;
+	width: 20px;
+	height: 20px;
+	right: 20px; 
 }
 
-@keyframes zoom {
-    from {transform:scale(0)} 
-    to {transform:scale(1)}
+.image-lightbox .close a {
+	height: auto; 
+	width: auto;
+	padding: 5px 10px;
+	color: #fff;
+	text-decoration: none;
+	background: #22272c;
+	box-shadow: inset 0px 24px 20px -15px rgba(255, 255, 255, 0.1), inset 0px 0px 10px rgba(0,0,0,0.4), 0px 0px 30px rgba(255,255,255,0.4);
+	border-radius: 5px;
+	font-weight: bold;
+	float: right;
 }
 
-/* The Close Button */
-.close {
-    position: absolute;
-    top: 20%;	
-    right: 20%;
-    color: #f1f1f1;
-    font-size: 40px;
-    font-weight: bold;
-    transition: 0.3s;
+.image-lightbox .close a:hover {
+	box-shadow: inset 0px -24px 20px -15px rgba(255, 255, 255, 0.01), inset 0px 0px 10px rgba(0,0,0,0.4), 0px 0px 20px rgba(255,255,255,0.4);
 }
 
-.close:hover,
-.close:focus {
-    color: #bbb;
-    text-decoration: none;
-    cursor: pointer;
+div[id^=image]:target {
+	width: 900px;
+	height: 600px;
+	z-index: 5000;	
+	left: 200px;
+}
+div[id^=image]:target .close {
+	display: block;
 }
 
-/* 100% Image Width on Smaller Screens */
-@media only screen and (max-width: 700px){
-    .modal-content {
-        width: 100%;
-    }
+div[id^=image]:target .expand {
+	display: none;
 }
-
 /*end my image css*/
 
 .details {
@@ -345,20 +350,17 @@ img.icon:hover {
   margin: 20px;
   background-color: white;
   display: inline-block;
-  padding: 0px 0 30px 0;
   /*//height: 500px;*/
 }
-
-
 .portfolio-text {
-  width: 100%; 
+  width: 75%;
+  margin-left:-10px;
   background-color: white;
   text-align:left;
   display: inline-block;
   font-size: 14px;
-  /*padding: 5px;
-   margin-left:-10px;*/
-  padding-top: 20px;
+  padding: 25px;
+  padding-top: 0px;
   line-height: 24px;
   margin: 0 auto;
   /*//height: 500px;*/
