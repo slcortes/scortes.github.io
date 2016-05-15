@@ -22,99 +22,6 @@ a {
 a img {
   border: none;
 }
-/*my image css*/
-
-
-.image-lightbox img {
-	/* Inherit the width and height from the parent element */
-	width: inherit;
-	height: inherit;
-	z-index: 3000;
-}
-
-.holder {
-	/* The width and height, you can change these */
-	width: 400px;
-	height: 300px;
-	/* Float left, so everything aligns right */
-	float: left;
-	margin: 0 20px 0 0;
-	
-	
-}
-
-.image-lightbox {
-	/* Inherit width and height from the .holder */
-	width: inherit;
-	height: inherit;
-	padding: 10px;
-	/* Box shadow */
-	box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
-	background: #fff;
-	border-radius: 5px;
-	/* Position absolutely so we can zoom it out later */
-	position: absolute;
-	
-	font-family: Arial, sans-serif;
-	/* Transitions to provide some eye candy */
-	-webkit-transition: all ease-in 0.5s;
-	-moz-transition: all ease-in 0.5s;
-	-ms-transition: all ease-in 0.5s;
-	-o-transition: all ease-in 0.5s;
-}
-
-.image-lightbox span {
-	display: none;
-}
-
-.image-lightbox .expand {
-	width: 100%;
-	height: 100%;
-	position: absolute;
-	top: 0;
-	z-index: 4000;
-	background: rgba(0,0,0,0); /* Fixes an IE bug */
-	left: 0;
-}
-
-.image-lightbox .close {
-	position: absolute;
-	width: 20px;
-	height: 20px;
-	right: 20px; 
-}
-
-.image-lightbox .close a {
-	height: auto; 
-	width: auto;
-	padding: 5px 10px;
-	color: #fff;
-	text-decoration: none;
-	background: #22272c;
-	box-shadow: inset 0px 24px 20px -15px rgba(255, 255, 255, 0.1), inset 0px 0px 10px rgba(0,0,0,0.4), 0px 0px 30px rgba(255,255,255,0.4);
-	border-radius: 5px;
-	font-weight: bold;
-	float: right;
-}
-
-.image-lightbox .close a:hover {
-	box-shadow: inset 0px -24px 20px -15px rgba(255, 255, 255, 0.01), inset 0px 0px 10px rgba(0,0,0,0.4), 0px 0px 20px rgba(255,255,255,0.4);
-}
-
-div[id^=image]:target {
-	width: 900px;
-	height: 600px;
-	z-index: 5000;	
-	left: 200px;
-}
-div[id^=image]:target .close {
-	display: block;
-}
-
-div[id^=image]:target .expand {
-	display: none;
-}
-/*end my image css*/
 
 .details {
   max-width: 1024px;
@@ -278,12 +185,11 @@ span.answer {
 #resume {
   background-color: #ddd;
   height: auto;
-  margin-top: -20px;
-  padding-top: 20px;
+  margin-top: -30px;
+  padding-top: 60px;
 /*  //font-family: 'Karla';*/
   font-size: 19px;
-  line-height: 24px;
-  text-align:left;
+  line-height: 34px;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -340,8 +246,6 @@ img.icon:hover {
 
 .row {
   clear: both;
-  width: 90%;
-  padding: 60px 0 60px 0;
 }
 
 
@@ -350,19 +254,6 @@ img.icon:hover {
   margin: 20px;
   background-color: white;
   display: inline-block;
-  /*//height: 500px;*/
-}
-.portfolio-text {
-  width: 75%;
-  margin-left:-10px;
-  background-color: white;
-  text-align:left;
-  display: inline-block;
-  font-size: 14px;
-  padding: 25px;
-  padding-top: 0px;
-  line-height: 24px;
-  margin: 0 auto;
   /*//height: 500px;*/
 }
 
@@ -389,16 +280,12 @@ img.icon:hover {
 
 #footer{
   background: #fafafa;
-  min-height: 40px;
-  max-height:60px;
-  text-align: center;
+  min-height: 50px;
+  text-align: left;
   color: #b1b1b1;
   padding-top: 20px;
   font-size: 12px;
   line-height: 20px;
-  width:100%;
-  position:absolute;
-
 }
 
 /*tableOfContents*/
@@ -586,9 +473,8 @@ ul.tContents {
     display: inline-block;
     float: left;
     width: 55%;
-    padding-right: 10px;
+        padding-right: 10px;
   }
- 
 
   li.mobile-header {
     display: inline-block;
@@ -725,4 +611,33 @@ ul.tContents {
   #code {
     margin-bottom: 20px;
   }
-}
+
+#Skill-HTML {
+ width: 100%;
+ animation: Animate-HTML 4s;
+ -webkit-animation: Animate-HTML 4s;
+ -moz-animation: Animate-HTML 4s;
+ -o-animation: Animate-HTML 4s;
+ height: 45px;
+ position: absolute;
+ background-color: #F9690E;
+ -webkit-border-radius: 3px;
+ -moz-border-radius: 3px;
+ border-radius: 3px;
+ }
+ @keyframes Animate-HTML {
+ a from {width: 10px;}
+ to {width: 100%}
+ }
+ @-webkit-keyframes Animate-HTML {
+ from {width: 10px;}
+ to {width: 100%}
+ }
+ @-moz-keyframes Animate-HTML {
+ from {width: 10px;}
+ to {width: 100%}
+ }
+ @-o-keyframes Animate-HTML {
+ from {width: 10px;}
+ to {width: 100%}
+ }
